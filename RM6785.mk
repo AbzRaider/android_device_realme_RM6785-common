@@ -233,20 +233,12 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
-    android.hardware.power@1.2.vendor:64
-
-PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
-    libmtkperf_client
-
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    android.hardware.power-service-mediatek \
+    android.hardware.power@1.2.vendor \
+    vendor.mediatek.hardware.mtkpower@1.2
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/power,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # PowerOffAlarm
 PRODUCT_PACKAGES += \
@@ -293,9 +285,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
-    hardware/mediatek/libmtkperf_client \
-    $(LOCAL_PATH)
-
+     $(LOCAL_PATH)
+	
 # Soundtrigger
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl:32
