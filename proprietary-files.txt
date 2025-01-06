@@ -1385,8 +1385,20 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Power
--vendor/lib64/vendor.mediatek.hardware.power@1.1.so
--vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+
+# Power - from Lenovo-TB-J616F_S240155_230210_ROW
+-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service|ad3f45bfffdfe79f81733ef81022016c076ee06c
+-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc|fd1949bc7bff9b293a5634d0e181d387ad0f69f6
+-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc|1a7c82fde63ddf0815938f554550a05edb473f39
+-vendor/lib/libmtkperf_client_vendor.so|a9ed1c2fc43418acff7649e0c473cc7e6181d794
+-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so|aa653ef186dcd46d72c350123566cbc569206347
+-vendor/lib64/libmtkperf_client_vendor.so|fd4dc0543991f1d69845b6db7872067eeca687a9
+-vendor/lib64/libperfctl_vendor.so|05d7cc413942c11e817dba3bcab5aa0ce893dd5d
+-vendor/lib64/libpower_timer.so|d2ed344bbdc62baad7504b323d0cfd6024a8520b
+-vendor/lib64/libpowerhal.so|5ac6580b1170d87d8246da7b6ca816b7f1719dd3 
+-vendor/lib64/libpowerhalwrap_vendor.so|c7526329268adaa433f868b2906ac9d25ba0bc6c
+
 
 # PQ
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
@@ -1600,6 +1612,9 @@ framework/mediatek-ims-legacy.jar
 -odm/lib64/vendor.oplus.hardware.radio@1.0.so
 vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
 vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
+
+# Radio (MTK_IMS) - from Lenovo-TB-J616F_S240155_230210_ROW
+-system_ext/lib64/libmtkperf_client.so|e25e5af60b58f390ad46832e9dcfb9a298b62fec
 
 # Radio (Video Telephony) - from TECNO-U-64-ARMV82-230626V601DevT
 -system_ext/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2

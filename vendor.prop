@@ -101,8 +101,7 @@ ro.vendor.mtk_hdr_video_support=1
 # Incremental
 ro.incremental.enable=yes
 
-# Power HAL
-vendor.powerhal.disp.idle_support=false
+
 
 # MTK
 ro.vendor.mediatek.platform=MT6785
