@@ -55,6 +55,7 @@ persist.vendor.connsys.fm_chipid=mt6631
 persist.vendor.connsys.patch.version=-1
 ro.vendor.wlan.gen=gen4m
 vendor.connsys.driver.ready=no
+ro.vendor.mtk_gwsd_support=1
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
