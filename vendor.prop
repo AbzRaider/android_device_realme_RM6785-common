@@ -105,6 +105,8 @@ vendor.powerhal.disp.idle_support=false
 
 # MTK
 ro.vendor.mediatek.platform=MT6785
+ro.vendor.mediatek.version.branch=alps-mp-r0.mp1.tc16sp-pr2
+ro.vendor.mediatek.version.release=alps-mp-r0.mp1.tc16sp-pr2-V1.1
 
 # Neuralnetworks
 debug.mtk_tflite.target_nnapi=29
