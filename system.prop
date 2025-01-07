@@ -6,3 +6,12 @@ persist.dbg.volte_avail_ovr=1
 
 # Platform
 ro.mediatek.version.branch=alps-mp-r0.mssi1.tc16sp-pr2
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+vendor.mtk_thumbnail_optimization=true
+ro.vendor.mtk_omacp_support=1
+ro.vendor.mtk_flv_playback_support=1
+ro.vendor.mtk_system_update_support=1
+
+
