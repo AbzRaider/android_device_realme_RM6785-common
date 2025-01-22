@@ -283,7 +283,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/mediatek 
+    hardware/mediatek \
+     $(LOCAL_PATH)
 	
 # Soundtrigger
 PRODUCT_PACKAGES += \
