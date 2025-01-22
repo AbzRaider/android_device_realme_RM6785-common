@@ -152,9 +152,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek-mali
 
-# Neutral Networks
+# Neural Networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor:64
+    android.hardware.neuralnetworks@1.3.vendor:64 \
+    APUWareApusysServer.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
