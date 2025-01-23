@@ -157,8 +157,7 @@ PRODUCT_PACKAGES += \
 
 # Neural Networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor:64 \
-    APUWareApusysServer.vendor
+    android.hardware.neuralnetworks@1.3.vendor:64 
 
 # NFC
 PRODUCT_PACKAGES += \
