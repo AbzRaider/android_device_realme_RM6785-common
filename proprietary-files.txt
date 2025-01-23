@@ -1328,7 +1328,6 @@ vendor/etc/armnn_app.config
 vendor/etc/nhw
 -vendor/lib64/APUWareUtilsServer.so
 -vendor/lib64/APUWareXrpServer.so
--vendor/lib64/APUWareApusysServer.so|5875e9d9d7daef70c16d5a85f2a21159d177d502
 -vendor/lib64/libapusys.so
 -vendor/lib64/libarmnn.so
 -vendor/lib64/libarmnn_ndk.mtk.so
