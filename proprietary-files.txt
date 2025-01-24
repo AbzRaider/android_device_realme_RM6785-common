@@ -289,14 +289,15 @@ odm/firmware/aw87359/aw87359_drcv.bin
 odm/firmware/aw87359/aw87359_dspk.bin
 odm/firmware/aw87359/aw87359_dspk_ftm.bin
 
-# Bluetooth
--vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
+# Bluetooth from - RMX2156_A12_F.17
+-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 -vendor/bin/autobt
-vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
+vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
 -vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
--vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
+-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 -vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
+-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 -vendor/lib64/libbluetooth_audio_session_mediatek.so
 -vendor/lib64/libbluetooth_hw_test.so
 -vendor/lib64/libbluetooth_mtk.so
@@ -305,12 +306,14 @@ vendor/etc/init/init.bt_drv.rc
 -vendor/lib64/libbluetoothem_mtk.so
 -vendor/lib64/libbt-vendor.so
 -vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Bluetooth (aptX)
 -lib64/libaptXHD_encoder.so
 -lib64/libaptX_encoder.so
 
-# Bluetooth (Firmware)
+# Bluetooth (Firmware) - from RMX2156_A12_F.17
 vendor/firmware/BT_FW.cfg
 
 # Camera
