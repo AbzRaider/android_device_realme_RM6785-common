@@ -31,8 +31,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util.vendor \
     android.hardware.audio@6.0-util \
     android.hardware.audio@6.0-util.vendor \
-    android.hardware.soundtrigger@2.3.vendor \
-    android.hardware.bluetooth.audio-impl 
+    android.hardware.soundtrigger@2.3.vendor  
 
 PRODUCT_PACKAGES += \
     audio_policy.stub \
@@ -54,13 +53,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor:64
+    android.hardware.bluetooth@1.0.vendor:64 \
+    android.hardware.bluetooth@1.1.vendor:64 \
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    libbluetooth_audio_session \
+     
 
 # Camera
 PRODUCT_PACKAGES += \
