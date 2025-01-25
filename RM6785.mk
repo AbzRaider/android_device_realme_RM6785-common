@@ -141,11 +141,12 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6785.rc \
     init.mt6785.usb.rc \
+	init.cgroup.rc \
     init.project.rc \
     init.sensor_1_0.rc \
     init.RM6785.rc \
     ueventd.mtk.rc \
-    ueventd.RM6785.rc
+    ueventd.RM6785.rc 
 
 PRODUCT_PACKAGES += \
     init_RM6785_vendor
