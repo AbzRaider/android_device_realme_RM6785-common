@@ -1412,7 +1412,6 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -vendor/lib/libpowerhalwrap_vendor.so|cab2b56a8c12a7b43d2a271ace5bb5c880d1d7c0
 -vendor/lib64/libpowerhalwrap_vendor.so|c7526329268adaa433f868b2906ac9d25ba0bc6c
 
-
 # PQ
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
