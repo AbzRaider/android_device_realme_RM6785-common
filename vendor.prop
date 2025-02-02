@@ -61,6 +61,7 @@ vendor.connsys.driver.ready=no
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # DRM
+ro.vendor.mtk_sec_video_path_support=1
 drm.service.enabled=true
 ro.netflix.bsp_rev=MTK6785-18787-1
 
@@ -96,7 +97,7 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
-ro.vendor.mtk_hdr_video_support=1
+
 
 # Incremental
 ro.incremental.enable=yes
@@ -108,6 +109,9 @@ ro.vendor.mediatek.platform=MT6785
 ro.vendor.mediatek.version.branch=alps-mp-r0.mp1.tc16sp-pr2
 ro.vendor.mediatek.version.release=alps-mp-r0.mp1.tc16sp-pr2-V1.1
 
+# DRAM
+ro.vendor.mtk_config_max_dram_size=0x800000000
+
 # Neuralnetworks
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=D,E,F,Z
@@ -115,10 +119,10 @@ ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
 # OMX
-ro.vendor.mtk_config_max_dram_size=0x800000000
-ro.vendor.mtk_sec_video_path_support=1
-ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_hdr_video_support=1
+ro.vendor.pref_scale_enable_cfg=1
 vendor.mtk.vdec.waitkeyframeforplay=7
+
 
 # PQ
 ro.vendor.mtk_pq_color_mode=1
@@ -172,7 +176,6 @@ ro.vendor.mtk_single_bin_modem_support=1
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_world_phone_policy=0
 ro.vendor.num_md_protocol=2
-ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 ro.vendor.sim_refresh_reset_by_modem=1
@@ -185,6 +188,7 @@ ro.soc.model=MT6785
 # TEE
 ro.hardware.kmsetkey=trustonic
 ro.vendor.mtk_trustonic_tee_support=1
+ro.vendor.mtk_tee_gp_support=1
 
 # Vibrator
 ro.vendor.vibrator.hal.click.duration=70
