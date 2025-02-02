@@ -10,10 +10,12 @@ gz.img
 logo.bin
 md1img.img
 preloader_ufs.img
-scp.img
-spmfw.img
-sspm.img
 tee.img
+
+# MTK Power Management Firmware - from RMX2156_A12_F.17
+scp.img|74d563829c5a7e92e1ba9bab4b8feb2e757a1e97
+spmfw.img|1003860c986a27b5cc1f85d57142a580eda5cbd7
+sspm.img|b17cc98b059da8c0037e3ab7fcfa53f6899e5ef0
 
 # Prevent lk from setting sku prop: sed -i 's/sku/fku/' lk.img
 lk.img|582aa0e251f9c5624a5ec48c0cafca4cd3331432
