@@ -39,7 +39,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 420
 
 # Kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.init_fatal_reboot_target=recovery androidboot.meta_log_disable=1
 TARGET_KERNEL_SOURCE := kernel/realme/mt6785
 TARGET_KERNEL_CONFIG := RM6785_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
