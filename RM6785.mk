@@ -151,6 +151,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init_RM6785_vendor
 	
+# GAPPS
+WITH_GMS := true
 
 # Cgroup
 PRODUCT_COPY_FILES += \
