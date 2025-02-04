@@ -15,6 +15,12 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
+# GMS
+ifeq ($(WITH_GMS),true)
+# Call proprietary GMS blob setup
+$(call inherit-product, vendor/gms/common/common-vendor.mk)
+endif
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/hidl/touch
