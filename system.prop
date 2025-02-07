@@ -14,4 +14,5 @@ ro.vendor.mtk_omacp_support=1
 ro.vendor.mtk_flv_playback_support=1
 
 
-
+# Play Integrity
+persist.play_integrity.status=pass
