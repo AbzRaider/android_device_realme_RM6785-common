@@ -102,6 +102,7 @@ ro.surface_flinger.set_touch_timer_ms=300
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
+persist.vendor.powerhal.touchboost_duration=15
 
 # Incremental
 ro.incremental.enable=yes
