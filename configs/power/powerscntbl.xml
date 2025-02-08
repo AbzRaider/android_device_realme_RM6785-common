@@ -28,4 +28,24 @@
 	<data cmd="PERF_RES_POWER_HINT_HOLD_TIME"  param1="80"></data>
 	<data cmd="PERF_RES_GPU_GED_MARGIN_MODE"   param1="50"></data>
     </scenario>
+    <scenario powerhint="SUSTAINED_PERFORMANCE">
+        <data cmd="PERF_RES_CPUFREQ_MAX_CLUSTER_0" param1="3000000"></data>
+        <data cmd="PERF_RES_CPUFREQ_MAX_CLUSTER_1" param1="3000000"></data>
+	<data cmd="PERF_RES_CPUFREQ_CCI_FREQ" param1="1"></data>
+        <data cmd="PERF_RES_SCHED_PLUS_UP_THROTTLE_NS" param1="1"></data>
+        <data cmd="PERF_RES_SCHED_PLUS_DOWN_THROTTLE_NS" param1="40000000"></data>
+        <data cmd="PERF_RES_GPU_POWER_POLICY" param1="1"></data>
+        <data cmd="PERF_RES_THERMAL_POLICY" param1="8"></data>
+        <data cmd="PERF_RES_GPU_GED_MARGIN_MODE" param1="130"></data>
+        <data cmd="PERF_RES_FPS_FPSGO_MARGIN_MODE" param1="2"></data>
+        <data cmd="PERF_RES_FPS_FPSGO_MARGIN_MODE_DBNC_A" param1="9"></data>
+        <data cmd="PERF_RES_FPS_FPSGO_MARGIN_MODE_DBNC_B" param1="1"></data>
+        <data cmd="PERF_RES_FPS_FPSGO_ADJ_LOADING" param1="1"></data>
+        <data cmd="PERF_RES_FPS_FPSGO_LLF_TH" param1="25"></data>
+        <data cmd="PERF_RES_TOUCH_CHANGE_RATE" param1="1"></data>
+	<data cmd="PERF_RES_DRAM_OPP_MIN" param1="0"></data>
+	<data cmd="PERF_RES_SCHED_BOOST" param1="3"></data>
+	<data cmd="PERF_RES_FPS_FBT_BHR_OPP" param1="15"></data>
+	<data cmd="PERF_RES_FPS_FBT_BOOST_TA" param1="3"></data>
+    </scenario>
 </SCNTABLE>
