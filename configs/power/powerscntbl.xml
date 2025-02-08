@@ -15,7 +15,7 @@
     </scenario>
     <scenario powerhint="MTKPOWER_HINT_APP_TOUCH">
         <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_NOTIFY_FBC" param1="1"></data>
-		<data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_DURATION" param1="150000"></data>
+	<data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_DURATION" param1="150000"></data>
         <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_EAS_BOOST" param1="50"></data>
     </scenario>
     <scenario powerhint="MTKPOWER_HINT_UX_SCROLLING">
@@ -24,7 +24,8 @@
         <data cmd="PERF_RES_CPUFREQ_MAX_CLUSTER_0" param1="3000000"></data>
         <data cmd="PERF_RES_CPUFREQ_MAX_CLUSTER_1" param1="3000000"></data>
         <data cmd="PERF_RES_SCHED_UCLAMP_MIN_TA"   param1="55"></data>
-		<data cmd="PERF_RES_SCHED_BOOST_VALUE_TA"  param1="50"></data>
-		<data cmd="PERF_RES_POWER_HINT_HOLD_TIME"  param1="80"></data>
+	<data cmd="PERF_RES_SCHED_BOOST_VALUE_TA"  param1="50"></data>
+	<data cmd="PERF_RES_POWER_HINT_HOLD_TIME"  param1="80"></data>
+	<data cmd="PERF_RES_GPU_GED_MARGIN_MODE"   param1="50"></data>
     </scenario>
 </SCNTABLE>
