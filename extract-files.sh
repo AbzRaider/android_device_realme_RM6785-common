@@ -53,14 +53,6 @@ function blob_fixup {
         vendor/lib64/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "$2"
             ;;
-        vendor/lib/libMtkOmxCore.so)
-            sed -i "s/mtk.vendor.omx.core.log/ro.vendor.mtk.omx.log\x00\x00/" "$2"
-            ;;
-        vendor/lib/libMtkOmxVdecEx.so)
-            "$PATCHELF" --replace-needed "libui.so" "libui-v32.so" "$2"
-            sed -i "s/ro.mtk_crossmount_support/ro.vendor.mtk_crossmount\x00/" "$2"
-            sed -i "s/ro.mtk_deinterlace_support/ro.vendor.mtk_deinterlace\x00/" "$2"
-            ;;
         vendor/lib/libaudio_param_parser-vnd.so)
             sed -i "s/\x00audio.tuning.def_path/\x00ro.vendor.tuning_path/" "$2"
             sed -i "s/\x20audio.tuning.def_path/\x20ro.vendor.tuning_path/" "$2"
@@ -120,9 +112,84 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+<<<<<<< HEAD
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+=======
+function blob_fixup {
+    case "${1}" in
+        lib/libsink.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.lights-service.mediatek)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
+            ;;
+        vendor/lib64/libudf.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
+            ;;
+        vendor/lib64/libmtkcam_stdutils.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
+        vendor/lib/hw/audio.primary.mt6785.so|\
+        vendor/lib64/hw/audio.primary.mt6785.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
+            ;;
+        vendor/lib/hw/audio.usb.mt6785.so|\
+        vendor/lib64/hw/audio.usb.mt6785.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
+            ;;
+        vendor/lib64/hw/dfps.mt6785.so)
+  	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
+        vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
+        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib64/libwvhidl.so|\
+        vendor/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
+            ;;
+        vendor/bin/mnld|\
+        vendor/lib64/libaalservice.so|\
+        vendor/lib64/libcam.utils.sensorprovider.so)
+	    [ "$2" = "" ] && return 0
+            grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            ;;
+        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
+            ;;
+        lib/libsource.so)
+	    [ "$2" = "" ] && return 0
+            grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
+            ;;
+        vendor/lib/libwvhidl.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
+}
+>>>>>>> 535fece (begonia: Drop MediaTek software OMX codecs)
 
     if [ -z "${ONLY_FIRMWARE}" ]; then
         extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
